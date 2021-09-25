@@ -1,0 +1,26 @@
+version: '3'
+services:
+  tomcat1:
+    image: tomcat:latest
+    container_name: tomcat1
+    volumes:
+      - /tmp/tomcat1:/usr/local/tomcat/webapps/
+    restart: always
+    ports:
+      - 8081:8080
+  tomcat2:
+    image: tomcat:latest
+    container_name: tomcat2
+    volumes:
+      - /tmp/tomcat2:/usr/local/tomcat/webapps/
+    restart: always
+    ports:
+      - 8082:8080
+  tomcat3:
+    image: tomcat:latest
+    container_name: tomcat3
+    volumes:
+      - /tmp/tomcat3:/usr/local/tomcat/webapps/
+    restart: always
+    ports:
+      - 8083:8080
