@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mytomcat
+spec:
+  selector:
+    matchLabels:
+      app: mytomcat
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: mytomcat
+    spec:
+      containers:
+      - name: mytomcat
+        image: mytomcat:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
