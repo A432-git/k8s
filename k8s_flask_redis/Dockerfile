@@ -4,9 +4,9 @@ WORKDIR /app
 ADD ./app /app
 #COPY requirements.txt /app/
 # Install any needed packages specified in requirement.txt
-RUN pip install requirements.txt
+RUN pip install -r /app/requirements.txt
 # Make port 6000 available to the world outside this container
-EXPOSE 6000
+EXPOSE 5000
 # Define environment variable
 ENV envname=k8s
 # ADD application.py to /app
